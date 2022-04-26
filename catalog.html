@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Orange Box" content="width=device-width, initial-scale=1.0">
+    <title>Меню</title>
+    <link rel="shortcut icon" href="./img/main_icon.png" type="image/png">
+    <link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./smartbasket/css/smartbasket.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/ctg.css">
+    
+    <link rel="shortcut icon" href="./img/main_icon.png" type="image/x-icon" />
+</head>
+
+<body>
+    <script src="./js/unit.js"></script>
+    <div class="head__h">
+        <a href="./index.html" class="a_l">
+            <div class="name_of_company">Orange Box</div>
+        </a>
+
+        <button class="basket_all"></button>
+    </div>
+    <div class="container" style="justify-content: center;">
+        <div class="col-md-3">
+            <p class="menu_w">МЕНЮ</p>
+        </div>
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-wrap">
+                    <ul class="navbar-menu">                        
+                        <li><a href="./salaty.html">Салаты</a></li>
+                        <li><a href="./holodnie.html">Холодные закуски</a></li>
+                        <li><a href="./pervoe.html">Первое блюдо</a></li>
+                        <li><a href="./vtoroe.html">Второе блюдо</a></li>
+                        <li><a href="./deserty.html">Десерты</a></li>
+                        <li><a href="./napitki.html">Напитки</a></li>                    
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+
+    </div>    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./smartbasket/js/smartbasket.min.js"></script>
+    <div class="smart-basket__wrapper"></div>
+
+
+
+        <script>
+            $(function () {
+                $('.smart-basket__wrapper').smbasket({
+                    productElement: 'product',
+                    buttonAddToBasket: 'add-to-cart',
+                    productPrice: 'price',
+                    productQuantityWrapper: 'product__quantity',
+                    smartBasketMinArea: 'basket_all',
+                    countryCode: '+7',
+                    smartBasketCurrency: '₸',
+                    smartBasketMinIconPath: './img/basket.svg',
+
+                    agreement: {
+                        isRequired: true,
+                        isChecked: true,
+                        isLink: 'https://artstranger.ru/privacy.html',
+                    },
+                    nameIsRequired: false,
+                });
+            });
+        </script>
+</body>
+</html>

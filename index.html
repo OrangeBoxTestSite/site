@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Orange Box" content="width=device-width, initial-scale=1.0">
+    <title>Orange Box</title>
+    <link rel="shortcut icon" href="./images/main_icon.png" type="image/png">
+    <link rel="stylesheet" href="./smartbasket/css/smartbasket.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    
+
+    <link rel="shortcut icon" href="./img/main_icon.png" type="image/x-icon" />
+</head>
+
+<body>
+    <div class="head__h">
+        <a href="./index.html" class="a_l">
+            <div class="name_of_company">Orange Box</div>
+        </a>
+
+        <button class="basket_all"></button>
+    </div>
+    <div class="main_container">
+
+        <div class="inner">
+            <h3 class="def__txt">Orange Box -
+                вкуснее вместе
+            </h3>
+        </div>
+        <div class="cor">
+            <p class="contacts">
+                Местоположение:<br>
+                Город Нур-Султан<br>
+                А. Пушкина 11<br><br>
+                Контакты:<br>
+                E-Mail: <E-mail>example@gmail.com</E-mail><br>
+                Телефон: +7 7XX XXX XXXX
+
+            </p>
+            <div class="btn_styles">
+                <a href="catalog.html">Перейти к меню</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+    <div class="smart-basket__wrapper"></div>
+
+    <script src="./smartbasket/js/smartbasket.min.js"></script>
+
+        <script>
+            $(function () {
+                $('.smart-basket__wrapper').smbasket({
+                    productElement: 'product',
+                    buttonAddToBasket: 'add-to-cart',
+                    productPrice: 'price',
+                    productQuantityWrapper: 'product__quantity',
+                    smartBasketMinArea: 'basket_all',
+                    countryCode: '+7',
+                    smartBasketCurrency: '₸',
+                    smartBasketMinIconPath: './img/basket.svg',
+
+                    agreement: {
+                        isRequired: true,
+                        isChecked: true,
+                        isLink: 'https://artstranger.ru/privacy.html',
+                    },
+                    nameIsRequired: false,
+                });
+            });
+        </script>
+</body>
+
+</html>

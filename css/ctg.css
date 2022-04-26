@@ -1,0 +1,19 @@
+body, * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  
+  body {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    font-family: 'Gilroy Regular';
+    background-color: #fdd2ad;
+    padding-top: 30px;
+    width: 100%;
+    height: 100vh;
+    background-image: none;
+    background-size: cover; 
+  
+  }
